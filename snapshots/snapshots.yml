@@ -1,0 +1,8 @@
+ snapshots:
+  - name: orders_snapshot
+    relation: ref('raw_orders')
+    config:
+      unique_key: order_id
+      strategy: timestamp
+      updated_at: modified_at
+      invalidate_hard_deletes: true
